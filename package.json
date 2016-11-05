@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "DEBUG=code-horic:* npm start",
-    "test:api": "mocha test/**/*.spec.js",
+    "test": "npm run test:api",
+    "test:api": "mocha server/test/api/**/*.spec.js",
     "start": "node ./bin/www"
   },
   "dependencies": {
