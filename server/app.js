@@ -36,14 +36,19 @@ app.use((req, res, next) => {
 app.use((err, req, res, next) => {
   /* eslint-enable */
 
-  // development error handler will print stacktrace
-  const error = app.get('env') === 'development' ? err : {};
+  var response = {
+    error: {
+      message: err.message,
+    }
+  };
+
+  if(app.get('env') === 'development') {
+    // development error handler will print stacktrace
+    response.error.detail = err;
+  }
 
   res.status(err.status || 500);
-  res.render('error', {
-    message: err.message,
-    error,
-  });
+  res.json(response);
 });
 
 module.exports = app;
