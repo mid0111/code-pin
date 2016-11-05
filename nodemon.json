@@ -1,6 +1,8 @@
 {
   "restartable": "rs",
   "ignore": [
-    "test"
+    "coverage",
+    "test",
+    "webpack"
   ]
 }

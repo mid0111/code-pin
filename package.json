@@ -5,9 +5,11 @@
   "scripts": {
     "build": "webpack --config webpack/build.webpack.js",
     "lint": "eslint server client test webpack --fix",
-    "test": "npm run test:server",
+    "test": "npm-run-all test:*",
     "test:server": "istanbul cover --dir ./coverage/server/ _mocha test/server/**/*.spec.js",
-    "dev": "DEBUG=code-horic:* nodemon ./bin/www",
+    "dev": "npm-run-all --parallel dev:*",
+    "dev:server": "NODE_ENV=development DEBUG=code-horic:* nodemon ./bin/www",
+    "dev:client": "webpack-dev-server --hot --inline --content-base client/ --config webpack/dev.webpack.js",
     "start": "node ./bin/www"
   },
   "dependencies": {
@@ -41,9 +43,11 @@
     "istanbul": "^0.4.5",
     "mocha": "^3.1.2",
     "nodemon": "^1.11.0",
+    "npm-run-all": "^3.1.1",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "supertest": "^2.0.1",
-    "webpack": "^1.13.3"
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
   }
 }
