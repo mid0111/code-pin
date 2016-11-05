@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "test": "npm run test:server",
+    "test:server": "istanbul cover --dir ./coverage/server/ _mocha server/test/**/*.spec.js",
     "dev": "DEBUG=code-horic:* npm start",
-    "test": "npm run test:api",
-    "test:api": "mocha server/test/api/**/*.spec.js",
     "start": "node ./bin/www"
   },
   "dependencies": {
@@ -22,6 +22,7 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
+    "istanbul": "^0.4.5",
     "mocha": "^3.1.2",
     "supertest": "^2.0.1"
   }
