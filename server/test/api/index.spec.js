@@ -1,5 +1,5 @@
-var request = require('supertest');
-var app = require('../../app');
+const request = require('supertest');
+const app = require('../../app');
 
 describe('/', () => {
   it('should respond 200 OK', (done) => {
