@@ -1,13 +1,12 @@
-const request = require('supertest');
 const chai = require('chai');
+const ApiClient = require('./ApiClient');
 
 const expect = chai.expect;
-
-const app = require('../../app');
+const request = new ApiClient();
 
 describe('/', () => {
   it('should respond 200 OK', (done) => {
-    request(app)
+    request
       .get('/')
       .expect('Content-Type', /html/)
       .expect(200)
@@ -17,7 +16,7 @@ describe('/', () => {
 
 describe('Error handler', () => {
   it('should respond 404 when routes not found', (done) => {
-    request(app)
+    request
       .get('/not/exists/routes')
       .expect('Content-Type', /json/)
       .expect(404)

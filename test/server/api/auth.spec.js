@@ -1,13 +1,12 @@
-const request = require('supertest');
 const chai = require('chai');
+const ApiClient = require('./ApiClient');
 
 const expect = chai.expect;
-
-const app = require('../../app');
+const request = new ApiClient();
 
 describe('/auth/github', () => {
   it('should redirect to github OAuth2 page', (done) => {
-    request(app)
+    request
       .get('/auth/github')
       .expect(302)
       .expect((res) => {
@@ -19,7 +18,7 @@ describe('/auth/github', () => {
 
 describe('/auth/github/callback', () => {
   it('should redirect to github OAuth2 page', (done) => {
-    request(app)
+    request
       .get('/auth/github/callback')
       .expect(302)
       .expect((res) => {
