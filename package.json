@@ -37,7 +37,7 @@
     "webpack-dev-server": "^1.16.2"
   },
   "engines": {
-    "node": ">=6.0"
+    "node": ">=6.0 <7"
   },
   "devDependencies": {
     "chai": "^3.5.0",
