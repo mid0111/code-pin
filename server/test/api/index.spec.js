@@ -16,16 +16,14 @@ describe('/', () => {
 });
 
 describe('Error handler', () => {
-
   it('should respond 404 when routes not found', (done) => {
     request(app)
       .get('/not/exists/routes')
       .expect('Content-Type', /json/)
       .expect(404)
-      .expect(res => {
-        expect(res.body.error.message).to.be.a.string;
+      .expect((res) => {
+        expect(res.body.error.message).to.be.a('string');
       })
       .end(done);
   });
-
 });

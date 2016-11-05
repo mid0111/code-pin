@@ -19,6 +19,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Initialize Passport and restore authentication state, if any, from the session.
+const passport = require('./models/passport');
+
+app.use(passport.initialize());
+app.use(passport.session());
+
 const routes = require('./routes/index');
 
 app.use('/', routes);
@@ -36,13 +42,13 @@ app.use((req, res, next) => {
 app.use((err, req, res, next) => {
   /* eslint-enable */
 
-  var response = {
+  const response = {
     error: {
       message: err.message,
-    }
+    },
   };
 
-  if(app.get('env') === 'development') {
+  if (app.get('env') === 'development') {
     // development error handler will print stacktrace
     response.error.detail = err;
   }

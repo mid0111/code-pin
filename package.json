@@ -1,5 +1,5 @@
 {
-  "name": "code-horic",
+  "name": "code-pin",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -16,6 +16,8 @@
     "ejs": "^2.5.2",
     "express": "~4.13.4",
     "morgan": "~1.7.0",
+    "passport": "^0.3.2",
+    "passport-github": "^1.1.0",
     "serve-favicon": "~2.3.0"
   },
   "engines": {
