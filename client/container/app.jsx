@@ -1,7 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import AppBar from 'material-ui/AppBar';
+import IconButton from 'material-ui/IconButton';
+import FontIcon from 'material-ui/FontIcon';
 
-ReactDOM.render(
-  <h1>Hello, world!</h1>,
-  document.getElementById('app')
+require('font-awesome/css/font-awesome.css');
+
+export default () => (
+  <AppBar
+    title="Code Pin"
+    iconElementLeft={<IconButton><FontIcon className="fa fa-coffee" /></IconButton>}
+  />
 );
+

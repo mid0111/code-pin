@@ -1,6 +1,7 @@
 const config = require('./base.config');
 
-config.output.publicPath = '/scripts/';
+config.output.publicPath = '/';
+
 config.devServer = {
   outputPath: config.output.path,
 
