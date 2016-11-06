@@ -22,6 +22,7 @@
     "babel-preset-react": "^6.16.0",
     "body-parser": "~1.15.1",
     "clean-webpack-plugin": "^0.1.14",
+    "compression": "^1.6.2",
     "cookie-parser": "~1.4.3",
     "copy-webpack-plugin": "^4.0.0",
     "css-loader": "^0.25.0",
