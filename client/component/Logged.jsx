@@ -3,7 +3,7 @@ import DropDownMenu from 'material-ui/DropDownMenu';
 import MenuItem from 'material-ui/MenuItem';
 import muiThemeable from 'material-ui/styles/muiThemeable';
 
-class Logged extends Component {
+export class LoggedComponent extends Component {
 
   constructor(props) {
     super(props);
@@ -43,7 +43,7 @@ class Logged extends Component {
   }
 }
 
-Logged.propTypes = {
+LoggedComponent.propTypes = {
   onLogoutClick: PropTypes.func.isRequired,
   user: PropTypes.shape({
     name: PropTypes.string,
@@ -51,4 +51,4 @@ Logged.propTypes = {
   muiTheme: PropTypes.shape({}),
 };
 
-export default muiThemeable()(Logged);
+export default muiThemeable()(LoggedComponent);
