@@ -1,5 +1,8 @@
 const config = require('./base.config');
 
+// Enable sourcemaps for debugging webpack's output.
+config.devtool = 'eval-cheap-module-source-map';
+
 config.output.publicPath = '/';
 
 config.devServer = {
