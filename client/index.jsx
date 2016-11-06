@@ -7,10 +7,11 @@ import { Router, Route, browserHistory } from 'react-router';
 import { syncHistoryWithStore, routerReducer } from 'react-router-redux';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import App from './container/app';
+import App from './component/App';
 
 injectTapEventPlugin();
 require('./styles/main.css');
+require('font-awesome/css/font-awesome.css');
 
 const store = createStore(
   combineReducers({

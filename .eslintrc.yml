@@ -14,3 +14,7 @@ rules:
   new-cap:
     - error
     - capIsNewExceptionPattern: "^express."
+  react/no-unused-prop-types:
+    - error
+    - skipShapeProps: true
+
