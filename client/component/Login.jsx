@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import FlatButton from 'material-ui/FlatButton';
 import muiThemeable from 'material-ui/styles/muiThemeable';
 
-const Login = ({ onLoginClick, muiTheme }) => (
+export const LoginComponent = ({ onLoginClick, muiTheme }) => (
   <FlatButton
     label="Login"
     onTouchTap={onLoginClick}
@@ -14,9 +14,9 @@ const Login = ({ onLoginClick, muiTheme }) => (
   />
 );
 
-Login.propTypes = {
+LoginComponent.propTypes = {
   onLoginClick: PropTypes.func.isRequired,
   muiTheme: PropTypes.shape({}),
 };
 
-export default muiThemeable()(Login);
+export default muiThemeable()(LoginComponent);

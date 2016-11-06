@@ -8,7 +8,8 @@ pids
 *.seed
 
 # Coverage directory used by tools like istanbul
-coverage
+coverage/server
+coverage/client
 
 # Dependency directory
 # https://docs.npmjs.com/cli/shrinkwrap#caveats

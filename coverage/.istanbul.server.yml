@@ -1,0 +1,6 @@
+instrumentation:
+    root: server
+    extensions:
+        - .js
+reporting:
+    dir: ./coverage/server

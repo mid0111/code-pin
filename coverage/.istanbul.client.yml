@@ -1,0 +1,7 @@
+instrumentation:
+    root: client
+    extensions:
+        - .js
+        - .jsx
+reporting:
+    dir: ./coverage/client
